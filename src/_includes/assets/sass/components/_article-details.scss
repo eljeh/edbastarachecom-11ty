@@ -1,0 +1,47 @@
+body.article-page{
+  .hero {
+    @media (min-width:1080px) {
+      flex-direction: row;
+    }
+    picture{
+      // max-width: 118ch;
+      // width: 100vw;
+      aspect-ratio: 6/3;
+      display:flex;
+    }
+
+  }
+  main > article {
+    gap: 2em;
+
+    .article-details{
+      align-self: center;
+      display: grid;
+      h1{
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em
+      }
+      span{
+        display: none;
+      }
+    }
+
+
+    svg {
+      width: 100%;
+    }
+    &> section {
+      max-width: 72ch;
+      h2{
+        padding-bottom: 1em;
+      }
+      h3{
+        padding-bottom: 0.75em;
+      }
+      p {
+        padding-bottom: 0.5em;
+      }
+    }
+  }
+}

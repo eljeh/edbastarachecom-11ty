@@ -1,0 +1,194 @@
+@use '../abstracts/' as *;
+@forward '../components/home-hero';
+@forward '../components/form';
+@forward '../layouts/project-card-list';
+@forward '../components/project-card';
+@forward '../layouts/article-card-list';
+@forward '../components/article-card';
+body {
+  background: var(--clr-body-bg);
+  color: var(--clr-body-ft);
+}
+
+section.hero{
+  container-type: inline-size;
+}
+
+section.intro {
+  min-height: 24em;
+  @include media-desktop {
+    margin-top: -5em;
+    margin-bottom: 2em;
+  }
+  .solution-list{
+    display: flex;
+    gap:2em;
+    padding-top: 1.618em !important;
+    flex-wrap: wrap;
+    @include media-desktop {
+      justify-content: space-around;
+      gap: 5vh;
+    }
+    .solution-card{
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      text-align: center;
+      background: var(--clr-card-bg);
+      padding: 0.5em 1em;
+      border: 2px solid var(--clr-card-br);
+      border-radius: 0.25em;
+      box-shadow: 0px 2px 9px 0px #5959595c;
+      background: radial-gradient(at top left, #ffffff 20%, var(--clr-accent-100) 200%);
+      border: 6px solid #e8edf7;
+
+      @include media-desktop {
+        align-items: start;
+        text-align: left;
+        z-index: 1;
+        flex: 0 1 28%;
+        max-width: 20em;
+      }
+      &>.icon{
+        font-size: 3em;
+        padding: 0.125em;
+        margin: 0.125em 0 0.5em;
+        color: white;
+        background: var(--clr-primary-400);
+        border-radius: 0.125em;
+      }
+    }
+  }
+}
+
+.featured-articles .content,
+.projects .content,
+.about .content,
+.knowledge .content{
+  align-items: stretch;
+  justify-content: start;
+
+}
+
+.featured-articles .list-link,
+.projects .list-link{
+  align-self: end;
+}
+
+
+.about .aboutme,
+.knowledge .skill-list{
+    padding: 1.618em;
+}
+.about{
+  flex: 1 0 62ch;
+}
+.knowledge {
+  .skill-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: start;
+    dl{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1em;
+      flex: 48%;
+      dt{
+        flex: 0 0 100%;
+        font-weight: 600;
+      }
+      dd{
+        font-size: 0.9em;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.about-knowledge>.content>.flex{
+  flex-direction: column;
+  align-items: center;
+  gap:4em;
+  @media (min-width: 1089px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+
+.contact-services>.content>.flex{
+  flex-direction: column;
+  align-items: center;
+  gap:4em;
+
+  @media (min-width: 1089px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .services{
+    display: flex;
+    flex-direction: column;
+    .service-list{
+      display: flex;
+      gap:1.618em;
+      flex-direction: column;
+      padding-top: 1.618em;
+      li{
+        background: var(--clr-card-bg);
+        padding: 1em 1.618em;
+        border: 2px solid var(--clr-card-br);
+        border-radius: 0.25em;
+        box-shadow: 0px 2px 9px 0px #5959595c;
+      }
+    }
+  }
+  .contact{
+    @include media-desktop {
+      flex: 1 0 42%;
+      display: flex;
+      flex-direction: column;
+    }
+    form{
+      margin-top: 1.618em;
+      flex: 1 1 auto;
+      padding: 0.5em 1.5em;
+      border: 2px solid var(--clr-card-br);
+      border-radius: 0.25em;
+      box-shadow: 0px 2px 9px 0px #5959595c;
+      label[for="message"]
+      {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        textarea{
+          flex: 1 1 auto;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 0.382em 1em;
+        background: var(--clr-accent-bg);
+        color: white;
+        border: 2px solid var(--clr-accent-bg);
+        border-radius: 0.25em;
+        box-shadow: 0px 2px 9px 0px #5959595c;
+        align-self: end;
+        justify-self: end;
+        @include media-desktop {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+body.home-page{
+  main > section:not(.intro),
+  main > article {
+    padding: 5em 4vw 3em;
+  }
+}

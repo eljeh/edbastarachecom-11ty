@@ -1,0 +1,19 @@
+---
+layout: layouts/_base.njk
+---
+<section class="hero">
+		<div class="hero-copy">
+			<h1 class="page-heading">
+				{{ title }}
+			</h1>
+	</div>
+</section>
+
+{{ layoutContent | safe }}
+<section class="project-list">
+	<div class="content contained column">
+		<h2 class="section-title kabob-title">Project List</h2>
+		{% set projectslist = collections.project %}
+		{% include "components/projectslist.njk" %}
+	</div>
+</section>

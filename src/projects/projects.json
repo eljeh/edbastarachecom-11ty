@@ -1,0 +1,12 @@
+{
+  "layout": "layouts/project.njk",
+  "permalink": "projects/{{ title | slug }}/index.html",
+  "articleType": "articleType",
+  "contentname": "project",
+  "tags": [
+    "project"
+  ],
+  "showcase": false,
+  "ancestors": "../../",
+  "pagestyle": "pages/project.css"
+}

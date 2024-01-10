@@ -1,0 +1,46 @@
+---
+layout: layouts/_base.njk
+---
+<article class="article">
+
+  <div class="hero">
+    <div>
+      <picture><img src="{{ heroImage }}"></picture>
+        {# {% if heroImage %}
+          {% image heroImage, title , '300', ''%}
+        {% endif %} #}
+
+        <a href="{{ '/' | url }}" class="animated pt-md">← Back Home</a>
+    </div>
+
+  </div>
+
+
+
+  <section>
+    <div class="article-details">
+      <h1 class="page-title">{{ title }}</h1>
+      {% if tags %}
+      <span>
+        {% for tag in tags %}
+          {%- if tag != "post" -%}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+          {%- endif -%}
+        {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+
+    {% if svgImage %}
+        {{ svgImage | svgContents("my-xl")  | safe }}
+    {% endif %}
+
+    {{ layoutContent | safe }}
+  </section>
+
+</article>
+
+
+
+

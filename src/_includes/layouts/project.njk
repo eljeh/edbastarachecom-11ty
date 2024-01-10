@@ -1,0 +1,55 @@
+---
+layout: layouts/_base.njk
+---
+<article class="article">
+
+  <div class="hero">
+    <div>
+      {% if heroImage %}
+        <picture>
+          <img alt="{{title}}" class="" loading="lazy" decoding="async" src="{{heroImage}}" width="1200" height="700">
+        </picture>
+      {% endif %}
+      <a href="{{ '/' | url }}" class="animated pt-md">← Back Home</a>
+    </div>
+  </div>
+
+  <section>
+    <h1 class="title">{{debriefing}}</h1>
+    <div class="columned-article">
+      <div class="project-details">
+        <ul>
+          {% if skills %}
+            <li>
+              <label>Skills</label>
+              <ul class="inline-list">
+                {% for skill in skills %}
+                  <li class="fakeIcon">{{ skill }}</li>
+                {% endfor %}
+              <ul>
+              
+              </li>
+          {% endif %}
+          {% if role %}
+            <li><label>Role</label>{{role}}</li>
+          {% endif %}
+          {% if URL %}
+            <li><label>URL</label>{{URL}}</li>
+          {% endif %}
+          {% if company %}
+            <li><label>Company</label>{{company}}</li>
+          {% endif %}
+        </ul>
+      </div>
+      <article>
+        {{ layoutContent | safe }}
+        {% if conclusion %}
+          <h2>Conclusion</h2>
+          <p>{{conclusion}}</p>
+        {% endif %}
+      </article>
+    </div>
+  </section>
+  
+</article>
+

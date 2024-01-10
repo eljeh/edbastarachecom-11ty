@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+form {
+  display: block;
+  flex-direction: column;
+  background: var(--clr-form-bg);
+  color: var(--clr-form-ft);
+  @include media-desktop {
+    display: flex;
+  }
+}
+
+form label span {
+  display: inline-block;
+  transform: translate(0.5em, 0.75em);
+  background: var(--clr-form-bg);
+  padding: 0 0.5em;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+input,
+textarea {
+  border: 1px solid var(--clr-input-br);
+  background: var(--clr-input-bg);
+  color: var(--clr-input-ft);
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}

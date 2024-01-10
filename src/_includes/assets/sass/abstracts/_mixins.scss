@@ -1,0 +1,15 @@
+@use 'visuals' as *;
+@use 'breakpoints' as *;
+
+@mixin media-phone {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+@mixin media-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+
