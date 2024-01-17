@@ -1,8 +1,10 @@
 <article class="showCase-Card">
 		<a href="{{post.url}}">
-				<picture>
-						<img src="{{post.data.heroImage | url}}" loading="lazy" width="100%" height="auto" alt="">
-				</picture>
+
+					<picture>
+						{# <img src="{{post.data.heroImage | url}}" loading="lazy" width="100%" height="auto" alt=""> #}
+						<img src="../img/uploads/HSTheme.png" loading="lazy" width="100%" height="auto" alt="">
+					</picture>
 				<div class="card-header">
 						<h3 class="heading card-title">
 								{{post.data.pageTitle}}
@@ -13,7 +15,7 @@
 				</div>
 				<div class="card-body">
 						<p class="card-description">
-							{{post.data.pageDiscription}}
+							{{post.data.pageDiscription}}s
 						</p>
 				</div>
 		</a> 

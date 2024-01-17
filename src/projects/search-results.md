@@ -1,7 +1,7 @@
 ---
 title: Search Results Page
 debriefing: The Search Results Page Refactoring
-heroImage: './img/uploads/searchPage.png'
+#heroImage: './img/uploads/searchPage.png'
 skills:
    - HTML
    - CSS
