@@ -1,7 +1,7 @@
 ---
 title: Design Thinking
 leadIn: A creative and human-centered approach to solving complex problems.
-heroImage: https://picsum.photos/600/300?random=2
+heroImage: '/img/uploads/designThinking.jpg'
 svgImage: /src/img/svgs/designthinking.svg
 tags: [
   'User Experience',
