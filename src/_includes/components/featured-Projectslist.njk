@@ -5,10 +5,10 @@
 	<article {% if project.url == url %} data-current="current item"{% endif %}>
 
 
-		{# {% if project.data.heroImage %}
+		{% if project.data.heroImage %}
 				{# <picture><img src="{{ project.data.heroImage }}"></picture> #}
-				{# {% image project.data.heroImage, project.data.title , "300", '' %}
-		{% endif %} #}
+				{% image project.data.heroImage, project.data.title , "300", '' %}
+		{% endif %}
 
 		<div class="copy">
 			<h3 class="heading">
