@@ -50,7 +50,6 @@ These steps are not fixed or rigid; you can go back and forth between them as ne
 
 {% image 'https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_960_720.jpg' 'Design Thinking Tools' '600' '' %}
 
-
 ## Examples of design thinking
 
 Design thinking has been used by many organizations across different industries and sectors to create innovative solutions for various problems. Here are some examples:
